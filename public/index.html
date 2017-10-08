@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="smoothieApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a ui-sref='home'><img class="devImg" src="./img/DevCircleWhite.svg" alt="DevMountain Logo"></a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="getStarted">Get Started</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js"></script>
+<script src="./app.js"></script>
+<script src="controllers/getStartedController.js"></script>
+<script src="controllers/orderController.js"></script>
+<script src="./service.js"></script>
+
+
+</body>
+</html>
