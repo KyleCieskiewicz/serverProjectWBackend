@@ -53,12 +53,11 @@
 
     <h2> {{ smoothieUser }}</h2>
 
-
-    <form>
+    <div>
         <a ui-sref="profile">
-            <input type="button" value="Next" ng-click="next()"/>
+            <button type="button" ng-click="next(smoothieUser)">Next</button>
         </a>
-    </form>
+    </div>
 
     <div ng-repeat="user in users">
         
