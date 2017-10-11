@@ -25,10 +25,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'getStartedController'
         })
 
-        .state('order', {
-            url: '/order',
-            templateUrl: 'views/partial-order.html',
-            controller: 'orderController'
+        .state('login', {
+            url: '/login',
+            templateUrl: 'views/partial-login.html',
+            controller: 'getStartedController'
+        })
+
+        .state('ingredients', {
+            url: '/ingredients',
+            templateUrl: 'views/partial-ingredients.html',
         });
 
 

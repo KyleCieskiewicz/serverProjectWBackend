@@ -26,8 +26,9 @@ const massiveConnection = massive(connectionString)
 
 
 
+app.post("/api/orders", serverController.addOrder);
+app.get("/api/orders", serverController.getAllOrders);
 app.post("/api/users", serverController.addUser);
-app.get("/api/users", serverController.getAllUsers);
 
 
 

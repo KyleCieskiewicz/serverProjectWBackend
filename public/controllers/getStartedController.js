@@ -1,54 +1,56 @@
 angular.module('smoothieApp').controller('getStartedController', function($scope, service){
 
-    $scope.smoothieUser = {};
+    // $scope.smoothieOrder = {};
     
-    $scope.next = function(smoothieUser) {
+    $scope.next = function(smoothieOrder) {
 
-        // console.log($scope.smoothieUser);
-        if (($scope.smoothieUser.proteinBase) && ($scope.smoothieUser.vege) && ($scope.smoothieUser.fruit)) {
-            // console.log("scope.next", smoothieUser)
-            // console.log(smoothieUser);
-            service.addUser(smoothieUser).then(
+        // if (($scope.smoothieOrder.proteinBase) && ($scope.smoothieOrder.vegetable) && ($scope.smoothieOrder.fruit)
+        // ($scope.smoothieOrder.twoweeksorder) && ($scope.smoothieOrder.size)) {
+            
+            service.addOrder(smoothieOrder).then(
                 function(response) {
-                    // console.log(response);
-                    $scope.users = response;
+                    
+                    $scope.order = response;
                     
                 }
             );
 
-        }
-        else {
-            alert('Smoothie specifications not selected!')
-        }
+        // }
+        // else {
+        //     alert('Smoothie specifications not selected!');
+        // }
     };
 
-    service.getAllUsers().then(
+    service.getAllOrders().then(
         function(response) {
 
-            $scope.users = response.data;
+            $scope.orders = response.data;
             
         }
     );
 
+    $scope.toOrder = function(smoothieUser) {
+                    
+        // if (($scope.smoothieUser.firstName) && ($scope.smoothieUser.lastName) && ($scope.smoothieUser.email)
+        //             ($scope.smoothieUser.address)) {
 
-    $scope.next = function(smoothieUser) {
-        
-                // console.log($scope.smoothieUser);
-                if (($scope.smoothieUser.proteinBase) && ($scope.smoothieUser.vege) && ($scope.smoothieUser.fruit)) {
-                    // console.log("scope.next", smoothieUser)
-                    // console.log(smoothieUser);
-                    service.addUser(smoothieUser).then(
-                        function(response) {
-                            // console.log(response);
-                            $scope.users = response;
+
+            service.addUser(smoothieUser).then(
+                function(response) {
                             
-                        }
-                    );
+                        $scope.users = response;
+                            
+                }
+            );
         
-                }
-                else {
-                    alert('Smoothie specifications not selected!')
-                }
-            };
+        // }
+        // else {
+        //         alert('Smoothie specifications not selected!')
+        // }
+
+    }
+
+
+
 });
 

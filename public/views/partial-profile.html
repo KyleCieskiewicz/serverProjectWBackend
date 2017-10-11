@@ -1,30 +1,28 @@
-<div>
-    <label for="firstName">First Name</label>
-    <input type="text" name="firstName" ng-model="smoothieUser.firstName">
-</div>
-
-<div>
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" ng-model="smoothieUser.lastName">
-</div>
-
-<div>
-    <label for="email">Email</label>
-    <input type="text" name="email" ng-model="smoothieUser.email">
-</div>
-
-<div>
-        <label for="address">Address</label>
-        <input type="text" name="address" ng-model="smoothieUser.address">
-</div>
-
-<div>
+<div class="jumbotron text-left">
+    <div>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" ng-model="smoothieUser.firstName">
+    </div>
 
     <div>
-        <a ui-sref="order">
-            <button type="button" ng-click="toOrder(smoothieUser)">Next</button>
-        </a>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" ng-model="smoothieUser.lastName">
     </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" ng-model="smoothieUser.email">
+    </div>
+
+    <div>
+            <label for="address">Address</label>
+            <input type="text" name="address" ng-model="smoothieUser.address">
+    </div>
+
 </div>
 
-<h2> {{ smoothieUser }}</h2>
+    <div>
+        <a ui-sref="home">
+            <button type="button" ng-click="toOrder(smoothieUser)" class="button">Next</button>
+        </a>
+    </div>

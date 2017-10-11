@@ -1,16 +1,20 @@
 angular.module('smoothieApp').service('service', function($http){
 
-    this.getAllUsers = function() {
-       return $http.get('/api/users/');
+    this.getAllOrders = function() {
+       return $http.get('/api/orders/');
+    },
+
+    this.addOrder = function(smoothieOrder) {
+        
+        // console.log("service", smoothieOrder);
+        return $http.post('/api/orders', smoothieOrder);
+    
     },
 
     this.addUser = function(smoothieUser) {
         
         // console.log("service", smoothieUser);
         return $http.post('/api/users', smoothieUser);
-    //     .then(response=>{
-    //         // console.log("service response:", response);
-    //         // return response.data;
-    //  })
+    
     }
 });

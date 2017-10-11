@@ -3,8 +3,10 @@
 <head>
 
     <!-- CSS (load bootstrap) -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/ingredients.css">
     <style>
         .navbar { border-radius:0; }
     </style>
@@ -23,6 +25,8 @@
     <ul class="nav navbar-nav">
         <li><a ui-sref="home">Home</a></li>
         <li><a ui-sref="getStarted">Get Started</a></li>
+        <li><a ui-sref="ingredients">Ingredients</a></li>
+        <li><a ui-sref="login">Login</a></li>
     </ul>
 </nav>
 
@@ -37,7 +41,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js"></script>
 <script src="./app.js"></script>
 <script src="controllers/getStartedController.js"></script>
-<script src="controllers/orderController.js"></script>
 <script src="./service.js"></script>
 
 
