@@ -2,6 +2,7 @@ angular.module('smoothieApp').controller('getStartedController', function($scope
 
     // $scope.smoothieOrder = {};
     
+<<<<<<< HEAD
     $scope.next = function(smoothieOrder) {
 
         // if (($scope.smoothieOrder.proteinBase) && ($scope.smoothieOrder.vegetable) && ($scope.smoothieOrder.fruit)
@@ -14,6 +15,11 @@ angular.module('smoothieApp').controller('getStartedController', function($scope
                     
                 }
             );
+=======
+    $scope.next = function() {
+        if (($scope.smoothieUser.proteinBase) && ($scope.smoothieUser.vege) && ($scope.smoothieUser.fruit)) {
+
+>>>>>>> parent of ab4eb86... able to add to database
 
         // }
         // else {
@@ -29,6 +35,7 @@ angular.module('smoothieApp').controller('getStartedController', function($scope
         }
     );
 
+<<<<<<< HEAD
     $scope.toOrder = function(smoothieUser) {
                     
         // if (($scope.smoothieUser.firstName) && ($scope.smoothieUser.lastName) && ($scope.smoothieUser.email)
@@ -54,3 +61,7 @@ angular.module('smoothieApp').controller('getStartedController', function($scope
 
 });
 
+=======
+    $scope.test = 'test';
+});
+>>>>>>> parent of ab4eb86... able to add to database

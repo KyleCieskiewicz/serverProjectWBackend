@@ -1,5 +1,6 @@
 
   module.exports = {
+<<<<<<< HEAD
 
     addOrder(req, res) {
       const db = req.app.get("db");
@@ -13,6 +14,9 @@
     },
 
     getAllOrders(req, res) {
+=======
+    getAllUsers(req, res) {
+>>>>>>> parent of ab4eb86... able to add to database
         const db = req.app.get("db");
         db.getAllOrders().then(orders => {
           res.json(orders);
