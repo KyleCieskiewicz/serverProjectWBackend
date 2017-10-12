@@ -26,13 +26,9 @@ const massiveConnection = massive(connectionString)
 
 
 
-<<<<<<< HEAD
 app.post("/api/orders", serverController.addOrder);
 app.get("/api/orders", serverController.getAllOrders);
 app.post("/api/users", serverController.addUser);
-=======
-app.get("/api/users", serverController.getAllUsers);
->>>>>>> parent of ab4eb86... able to add to database
 
 
 

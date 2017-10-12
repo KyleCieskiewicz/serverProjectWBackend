@@ -1,5 +1,5 @@
 angular.module('smoothieApp').service('service', function($http){
-<<<<<<< HEAD
+
 
     this.getAllOrders = function() {
        return $http.get('/api/orders/');
@@ -16,10 +16,11 @@ angular.module('smoothieApp').service('service', function($http){
         
         // console.log("service", smoothieUser);
         return $http.post('/api/users', smoothieUser);
+    },
     
-=======
+
     this.getAllUsers = function() {
        return $http.get('/api/users/');
->>>>>>> parent of ab4eb86... able to add to database
     }
+
 });
